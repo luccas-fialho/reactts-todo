@@ -32,6 +32,8 @@ const TaskForm = ({
   const addTaskHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (title === "") return;
+
     if (handleUpdate) {
       handleUpdate(id, title, difficulty);
     } else {
